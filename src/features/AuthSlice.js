@@ -16,7 +16,7 @@ export const LoginUser = createAsyncThunk(
   "/users/Login",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://duzdino.domcloud.io/login", {
         email: user.inputEmail,
         password: user.inputPassword,
       });
