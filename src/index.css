@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Lora:wght@500&family=Orbitron:wght@500&family=Special+Elite&display=swap");
+
+.font-orbitron {
+  font-family: "Orbitron", Helvetica, sans-serif;
+}
+
+.font-lora {
+  font-family: "Lora", Helvetica, sans-serif;
+}
+
+header div div span.font-exo {
+  font-family: "Exo 2", Helvetica, sans-serif;
+}
+
+.font-exo {
+  font-family: "Exo 2", Helvetica, sans-serif;
+}
+
+#nav ul li a.active {
+  border-color: rgb(229 231 235);
+  border-width: 1px;
+  background-color: rgb(229 231 235);
+  color: rgb(8 51 68 / 0.9);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(24 24 27);
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(229 231 235);
+}
+
+.reacttype {
+  background: -webkit-linear-gradient(
+    right,
+    rgb(98, 212, 4),
+    rgb(12, 195, 241)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.active-link {
+  /* Gaya yang ingin diatur saat link aktif */
+  background-color: #ccc; /* Misalnya, mengubah latar belakang link */
+  cursor: default; /* Mengubah kursor saat link aktif */
+}
