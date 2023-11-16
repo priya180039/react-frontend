@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getThreads = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/threads");
+    const response = await axios.get("https://duzdino.domcloud.io/threads");
     return response;
   } catch (err) {
     console.log(err.message);
@@ -11,7 +11,7 @@ export const getThreads = async () => {
 
 export const getThreadById = async (uuid) => {
   try {
-    const response = await axios.get(`http://localhost:5000/threads/${uuid}`);
+    const response = await axios.get(`https://duzdino.domcloud.io/threads/${uuid}`);
     return response;
   } catch (err) {
     return err.response.data;
@@ -20,7 +20,7 @@ export const getThreadById = async (uuid) => {
 
 export const getThreadsByUser = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/user-threads/");
+    const response = await axios.get("https://duzdino.domcloud.io/user-threads/");
     return response;
   } catch (err) {
     console.log(err.message);
@@ -29,7 +29,7 @@ export const getThreadsByUser = async () => {
 
 export const getRepliesByUser = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/user-replies/");
+    const response = await axios.get("https://duzdino.domcloud.io/user-replies/");
     return response;
   } catch (err) {
     console.log(err.message);
@@ -38,7 +38,7 @@ export const getRepliesByUser = async () => {
 
 export const getRepliesByThread = async (uuid) => {
   try {
-    const response = await axios.get(`http://localhost:5000/replies/${uuid}`);
+    const response = await axios.get(`https://duzdino.domcloud.io/replies/${uuid}`);
     return response;
   } catch (err) {
     return err.response.data;
@@ -47,7 +47,7 @@ export const getRepliesByThread = async (uuid) => {
 
 export const getReplies = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/replies");
+    const response = await axios.get("https://duzdino.domcloud.io/replies");
     return response;
   } catch (err) {
     console.log(err.message);
@@ -56,7 +56,7 @@ export const getReplies = async () => {
 
 export const getAuth = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/login");
+    const response = await axios.get("https://duzdino.domcloud.io/login");
     return response;
   } catch (err) {
     console.log(err.message);
@@ -66,7 +66,7 @@ export const getAuth = async () => {
 export const updateUser = async (uuid, user) => {
   try {
     const response = await axios.patch(
-      `http://localhost:5000/users/${uuid}`,
+      `https://duzdino.domcloud.io/users/${uuid}`,
       user
     );
     return response;
@@ -77,7 +77,7 @@ export const updateUser = async (uuid, user) => {
 
 export const registerUser = async (user) => {
   try {
-    const response = await axios.post("http://localhost:5000/users", user);
+    const response = await axios.post("https://duzdino.domcloud.io/users", user);
     return response;
   } catch (err) {
     return err.response.data;
@@ -86,7 +86,7 @@ export const registerUser = async (user) => {
 
 export const createPost = async (thread) => {
   try {
-    const response = await axios.post("http://localhost:5000/threads", thread);
+    const response = await axios.post("https://duzdino.domcloud.io/threads", thread);
     return response;
   } catch (err) {
     return err.response.data;
@@ -96,7 +96,7 @@ export const createPost = async (thread) => {
 export const updatePost = async (uuid, thread) => {
   try {
     const response = await axios.patch(
-      `http://localhost:5000/threads/${uuid}`,
+      `https://duzdino.domcloud.io/threads/${uuid}`,
       thread
     );
     return response;
@@ -108,7 +108,7 @@ export const updatePost = async (uuid, thread) => {
 export const deletePost = async (uuid) => {
   try {
     const response = await axios.delete(
-      `http://localhost:5000/threads/${uuid}`
+      `https://duzdino.domcloud.io/threads/${uuid}`
     );
     return response;
   } catch (err) {
@@ -118,7 +118,7 @@ export const deletePost = async (uuid) => {
 
 export const addReply = async (reply) => {
   try {
-    const response = await axios.post("http://localhost:5000/replies", reply);
+    const response = await axios.post("https://duzdino.domcloud.io/replies", reply);
     return response;
   } catch (err) {
     return err.response.data;
@@ -128,7 +128,7 @@ export const addReply = async (reply) => {
 export const editReply = async (uuid, reply) => {
   try {
     const response = await axios.patch(
-      `http://localhost:5000/replies/${uuid}`,
+      `https://duzdino.domcloud.io/replies/${uuid}`,
       reply
     );
     return response;
@@ -140,7 +140,7 @@ export const editReply = async (uuid, reply) => {
 export const deleteReply = async (uuid) => {
   try {
     const response = await axios.delete(
-      `http://localhost:5000/replies/${uuid}`
+      `https://duzdino.domcloud.io/replies/${uuid}`
     );
     return response;
   } catch (err) {
