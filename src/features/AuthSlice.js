@@ -34,7 +34,7 @@ export const RegisterUser = createAsyncThunk(
   "/users/Register",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("http://localhost:5000/users", {
+      const response = await axios.post("https://duzdino.domcloud.io/users", {
         firstName: user.inputFirst,
         lastName: user.inputLast,
         email: user.inputEmail,
