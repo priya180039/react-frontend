@@ -5,7 +5,7 @@ export const getThreads = async () => {
     const response = await axios.get("https://cucwako.domcloud.io/threads");
     return response;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data;
   }
 };
 
@@ -23,7 +23,7 @@ export const getThreadsByUser = async () => {
     const response = await axios.get("https://cucwako.domcloud.io/user-threads/");
     return response;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data;
   }
 };
 
@@ -32,7 +32,7 @@ export const getRepliesByUser = async () => {
     const response = await axios.get("https://cucwako.domcloud.io/user-replies/");
     return response;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data;
   }
 };
 
@@ -50,7 +50,7 @@ export const getReplies = async () => {
     const response = await axios.get("https://cucwako.domcloud.io/replies");
     return response;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data;
   }
 };
 
@@ -59,7 +59,7 @@ export const getAuth = async () => {
     const response = await axios.get("https://cucwako.domcloud.io/login");
     return response;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data;
   }
 };
 
