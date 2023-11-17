@@ -4,7 +4,7 @@ import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import NewPost from "../components/NewPost";
 import { getAuth } from "../api/Api";
-import axios from 'axios;
+import axios from 'axios';
 import { Navigate } from "react-router-dom";
 import { useHeader } from "../features/HeaderContext";
 import { BiSolidChevronUpCircle } from "react-icons/bi";
