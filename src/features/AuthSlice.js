@@ -79,35 +79,35 @@ const authSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
       })
-      .addCase(RegisterUser.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(RegisterUser.fulfilled, (state) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-      })
-      .addCase(RegisterUser.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = true;
-        if (action.payload) {
-          state.gotErr = true;
-        }
-        if (action.payload.includes("notEmpty on email")) {
-          state.msgEmail = "Tidak boleh kosong";
-        } else if (action.payload.includes("isEmail")) {
-          state.msgEmail = "Email tidak valid";
-        } else {
-          state.msgEmail = "";
-        }
-        if (action.payload.includes("already registered")) {
-          state.msgEmail = "Email telah terdaftar sebelumnya";
-        }
-        if (action.payload.includes("notEmpty on password")) {
-          state.msgPassword = "Tidak boleh kosong";
-        } else if (action.payload.includes("len on password")) {
-          state.msgPassword = "Password minimal 8 karakter";
-        }
-      });
+      // .addCase(RegisterUser.pending, (state) => {
+      //   state.isLoading = true;
+      // })
+      // .addCase(RegisterUser.fulfilled, (state) => {
+      //   state.isLoading = false;
+      //   state.isSuccess = true;
+      // })
+      // .addCase(RegisterUser.rejected, (state, action) => {
+      //   state.isLoading = false;
+      //   state.isError = true;
+      //   if (action.payload) {
+      //     state.gotErr = true;
+      //   }
+      //   if (action.payload.includes("notEmpty on email")) {
+      //     state.msgEmail = "Tidak boleh kosong";
+      //   } else if (action.payload.includes("isEmail")) {
+      //     state.msgEmail = "Email tidak valid";
+      //   } else {
+      //     state.msgEmail = "";
+      //   }
+      //   if (action.payload.includes("already registered")) {
+      //     state.msgEmail = "Email telah terdaftar sebelumnya";
+      //   }
+      //   if (action.payload.includes("notEmpty on password")) {
+      //     state.msgPassword = "Tidak boleh kosong";
+      //   } else if (action.payload.includes("len on password")) {
+      //     state.msgPassword = "Password minimal 8 karakter";
+      //   }
+      // });
   },
 });
 
