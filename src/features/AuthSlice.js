@@ -16,7 +16,7 @@ export const LoginUser = createAsyncThunk(
   "/users/Login",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("https://duzdino.domcloud.io/login", {
+      const response = await axios.post("https://cucwako.domcloud.io/login", {
         email: user.inputEmail,
         password: user.inputPassword,
       });
@@ -30,11 +30,11 @@ export const LoginUser = createAsyncThunk(
   }
 );
 
-export const RegisterUser = createAsyncThunk(
+/*export const RegisterUser = createAsyncThunk(
   "/users/Register",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("https://duzdino.domcloud.io/users", {
+      const response = await axios.post("https://cucwako.domcloud.io/users", {
         firstName: user.inputFirst,
         lastName: user.inputLast,
         email: user.inputEmail,
@@ -51,10 +51,10 @@ export const RegisterUser = createAsyncThunk(
       }
     }
   }
-);
+);*/
 
 export const LogoutUser = createAsyncThunk("user/Logout", async () => {
-  await axios.delete("http://localhost:5000/logout");
+  await axios.delete("https://cucwako.domcloud.io/logout");
   console.log("Logged Out");
 });
 
