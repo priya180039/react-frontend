@@ -4,6 +4,7 @@ import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import NewPost from "../components/NewPost";
 import { getAuth } from "../api/Api";
+import axios from 'axios;
 import { Navigate } from "react-router-dom";
 import { useHeader } from "../features/HeaderContext";
 import { BiSolidChevronUpCircle } from "react-icons/bi";
@@ -16,7 +17,7 @@ const Home = () => {
   const contentElement = document.getElementById("container");
 
   useEffect(() => {
-    getAuth().then((res)=> console.log(res.data))
+    const auth = await axios.get("https://cucwako.domcloud.io/login").then((res) => console.log(res.data))
     if (contentElement) {
       if (contentElement.offsetHeight > window.innerHeight) {
         setPageScroll(true);
