@@ -16,7 +16,7 @@ const Home = () => {
   const contentElement = document.getElementById("container");
 
   useEffect(() => {
-    getAuth().then((res)=> console.log(res.data)
+    getAuth().then((res)=> console.log(res.data))
     if (contentElement) {
       if (contentElement.offsetHeight > window.innerHeight) {
         setPageScroll(true);
