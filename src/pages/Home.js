@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import NewPost from "../components/NewPost";
-import axios from 'axios';
 import { Navigate } from "react-router-dom";
 import { useHeader } from "../features/HeaderContext";
 import { BiSolidChevronUpCircle } from "react-icons/bi";
@@ -16,14 +15,6 @@ const Home = () => {
   const contentElement = document.getElementById("container");
 
   useEffect(() => {
-    const auth = async () => {
-      try{
-        const response = await axios.get("https://cucwako.domcloud.io/login")
-        console.log(response.data.response)
-      } catch(err){
-        console.log(err.data.response)
-      }
-    }
     if (contentElement) {
       if (contentElement.offsetHeight > window.innerHeight) {
         setPageScroll(true);
