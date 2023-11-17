@@ -17,7 +17,7 @@ const Home = () => {
   const contentElement = document.getElementById("container");
 
   useEffect(() => {
-    const auth = await axios.get("https://cucwako.domcloud.io/login").then((res) => console.log(res.data))
+    await axios.get("https://cucwako.domcloud.io/login").then((res) => console.log(res.data))
     if (contentElement) {
       if (contentElement.offsetHeight > window.innerHeight) {
         setPageScroll(true);
