@@ -16,7 +16,7 @@ export const LoginUser = createAsyncThunk(
   "/users/Login",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("https://cleauve.domcloud.dev/login", {
+      const response = await axios.post(`https://cleauve3.domcloud.dev/login`, {
         email: user.inputEmail,
         password: user.inputPassword,
       });
@@ -55,7 +55,7 @@ export const LoginUser = createAsyncThunk(
 );*/
 
 export const LogoutUser = createAsyncThunk("user/Logout", async () => {
-  await axios.delete("https://cleauve.domcloud.dev/logout");
+  await axios.delete(`https://cleauve3.domcloud.dev/logout`);
   console.log("Logged Out");
 });
 
